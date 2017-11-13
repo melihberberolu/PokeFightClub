@@ -1,0 +1,39 @@
+{
+	"name": "PokeFightClub",
+	"author": "Melih Berberoğlu",
+	"version": "0.0.1",
+	"private": true,
+	"scripts": {
+		"start": "node node_modules/react-native/local-cli/cli.js start",
+		"test": "jest"
+	},
+	"dependencies": {
+		"axios": "^0.17.1",
+		"react": "16.0.0",
+		"react-native": "0.50.3",
+		"react-navigation": "^1.0.0-beta.19",
+		"react-redux": "^5.0.6",
+		"redux": "^3.7.2",
+		"redux-persist": "^5.3.4",
+		"redux-persist-transform-filter": "0.0.16",
+		"redux-saga": "^0.16.0"
+	},
+	"devDependencies": {
+		"babel-eslint": "^8.0.2",
+		"babel-jest": "21.2.0",
+		"babel-preset-react-native": "4.0.0",
+		"eslint": "^4.11.0",
+		"eslint-config-airbnb-base": "^12.1.0",
+		"eslint-config-prettier": "^2.7.0",
+		"eslint-plugin-import": "^2.8.0",
+		"eslint-plugin-prettier": "^2.3.1",
+		"eslint-plugin-react": "^7.4.0",
+		"eslint-plugin-react-native": "^3.1.0",
+		"jest": "21.2.1",
+		"prettier": "^1.8.2",
+		"react-test-renderer": "16.0.0"
+	},
+	"jest": {
+		"preset": "react-native"
+	}
+}

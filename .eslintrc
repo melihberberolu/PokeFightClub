@@ -1,0 +1,26 @@
+{
+  "parser": "babel-eslint",
+  "plugins": [
+    "react",
+    "react-native",
+    "prettier"
+  ],
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true,
+      "modules": true
+    }
+  },
+  "extends" : [
+    "prettier",
+    "prettier/react"
+  ],
+  "env": {
+    "es6": true,
+    "node": true
+  },
+  "rules" : {
+    "arrow-body-style" : "warn",
+    "prettier/prettier": "error"
+  }
+}
