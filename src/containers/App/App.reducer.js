@@ -1,7 +1,7 @@
-import { INIT_START, INIT_FINISH } from "./App.actions";
+import { INIT_START, INIT_FINISH } from './App.actions';
 
 const initialState = {
-  initInProgress: false
+  initInProgress: true
 };
 
 export default function(state = initialState, action = {}) {

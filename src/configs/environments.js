@@ -1,3 +1,3 @@
-const apiEndpoint = "http://pokeapi.co/api/v2/";
+const apiEndpoint = 'https://pokeapi.co/api/v1';
 
 export { apiEndpoint };

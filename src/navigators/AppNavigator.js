@@ -1,5 +1,5 @@
-import { StackNavigator } from "react-navigation";
-import PokeList from "../containers/PokeList/PokeList.container";
+import { StackNavigator } from 'react-navigation';
+import PokeList from '../containers/PokeList/PokeList.container';
 
 const AppNavigator = StackNavigator({
   PokeListScreen: {

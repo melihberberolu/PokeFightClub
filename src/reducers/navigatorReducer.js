@@ -1,12 +1,11 @@
-import { NavigationActions } from "react-navigation";
-import AppNavigator from "../navigators/AppNavigator";
+import AppNavigator from '../navigators/AppNavigator';
 
 const INITIAL_STATE = {
   index: 0,
   routes: [
     {
-      routeName: "PokeListScreen",
-      key: "init"
+      routeName: 'PokeListScreen',
+      key: 'init'
     }
   ]
 };

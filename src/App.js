@@ -1,10 +1,9 @@
-import React, { Component } from "react";
-import { Provider } from "react-redux";
-import AppWithNavigationState from "./AppWithNavigationState";
-import createStore from "./reducers/rootReducer";
-import { PersistGate } from "redux-persist/es/integration/react";
+import React, { Component } from 'react';
+import { Provider } from 'react-redux';
+import AppWithNavigationState from './AppWithNavigationState';
+import createStore from './reducers/rootReducer';
 
-const store = createStore();
+export const store = createStore();
 
 class App extends Component {
   render() {
