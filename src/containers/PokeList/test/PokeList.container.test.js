@@ -15,15 +15,21 @@ describe('Testing PokeList container', () => {
   };
   const mockStore = configureStore();
   let store;
+  let wrapper;
   beforeEach(() => {
     store = mockStore(initialState);
     store.dispatch = jest.fn();
-  });
-  it('should render the container component', () => {
-    const wrapper = shallow(
+    wrapper = shallow(
       <Provider store={store}>
         <PokeList />
       </Provider>
     );
+  });
+  it('should render the container component', () => {
+    expect(wrapper).toMatchSnapshot();
+    expect(wrapper.find(PokeList).length).toEqual(1);
+  });
+  it('check props matches with initialState', () => {
+    expect(wrapper.find(PokeList).prop('output')).toEqual(initialState.output);
   });
 });
