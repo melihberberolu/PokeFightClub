@@ -13,7 +13,7 @@ class Pokemon extends PureComponent {
         style={[styles.container, style]}
         onPress={() => showPokemonDetail(pokemon, pokemon.pkdx_id)}
       >
-        <View ref={ref => (this.image = ref)}>
+        <View ref={ref => (this.image = ref)} collapsable={false}>
           <PokemonImage pokemonId={pokemon.pkdx_id} />
         </View>
         <Text style={styles.name}>{_.upperFirst(pokemon.name)}</Text>
@@ -25,7 +25,7 @@ class Pokemon extends PureComponent {
 Pokemon.propTypes = {
   style: PropTypes.any,
   pokemon: PropTypes.object,
-  showPokemonDetail: PropTypes.func,
+  showPokemonDetail: PropTypes.func
 };
 
 export default Pokemon;

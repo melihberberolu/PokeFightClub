@@ -32,6 +32,7 @@ class PokemonDetailModal extends PureComponent {
     initCardPosition = INIT_CARD_POSITION,
     pokemon = null
   ) => {
+    console.log("initCardPosition:", initCardPosition)
     this.setState(
       { isVisible: isShow, cardPosition: initCardPosition, pokemon },
       () => isShow && this.startAnimationChain(isShow)
@@ -73,9 +74,12 @@ class PokemonDetailModal extends PureComponent {
   render() {
     const { isVisible, pokemon, cardPosition } = this.state;
     if (!isVisible) return null;
-
     return (
-      <Modal visible={isVisible} transparent>
+      <Modal
+        visible={isVisible}
+        transparent
+        onRequestClose={() => this.startAnimationChain(false)}
+      >
         <Mask onPress={() => this.startAnimationChain(false)} />
         <Animated.View
           style={{

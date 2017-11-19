@@ -68,3 +68,8 @@
 -dontwarn java.nio.file.*
 -dontwarn org.codehaus.mojo.animal_sniffer.IgnoreJRERequirement
 -dontwarn okio.**
+
+/**
+ * Run Proguard to shrink the Java bytecode in release builds.
+ */
+def enableProguardInReleaseBuilds = true

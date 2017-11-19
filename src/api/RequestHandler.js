@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { Alert } from 'react-native';
+import { Alert, Platform } from 'react-native';
 import { apiEndpoint } from '../configs/environments';
 
 function errorHandler(msg = '') {
@@ -7,15 +7,33 @@ function errorHandler(msg = '') {
 }
 
 const requestHandler = options => {
-  return axios({
-    method: options.method || 'GET',
-    url: apiEndpoint + options.url,
-    headers: {
-      ...(options.headers ? options.headers : {})
-    },
-    ...(options.data ? { data: options.data } : {}),
-    ...(options.params ? { params: options.params } : {})
-  })
+  let androidAxiosGetInstance;
+  if (
+    options.method &&
+    Platform.OS === 'android' &&
+    options.method.toLowerCase() === 'get'
+  ) {
+    androidAxiosGetInstance = {
+      method: options.method || 'GET',
+      url: apiEndpoint + options.url,
+      headers: {
+        ...(options.headers ? options.headers : {})
+      },
+      ...(options.params ? { params: options.params } : {})
+    };
+  }
+  return axios(
+    androidAxiosGetInstance
+      ? androidAxiosGetInstance : {
+        method: options.method || 'GET',
+        url: apiEndpoint + options.url,
+        headers: {
+          ...(options.headers ? options.headers : {})
+        },
+        ...(options.data ? { data: options.data } : {}),
+        ...(options.params ? { params: options.params } : {})
+      }
+  )
     .then(response => response.data)
     .catch(error => errorHandler(error));
 };

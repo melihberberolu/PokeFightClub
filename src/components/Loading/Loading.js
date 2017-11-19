@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 
 const Loading = ({ loading, style }) => {
   return (
-    <Modal transparent visible={loading}>
+    <Modal transparent onRequestClose={() => {}} visible={loading}>
       <View style={[styles.container, style]}>
         <ActivityIndicator size={'large'} />
       </View>

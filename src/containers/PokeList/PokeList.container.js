@@ -43,7 +43,9 @@ class PokeList extends React.PureComponent {
   }
 
   showPokemonDetail(pokemon, id) {
+    console.log("this[`pokemon-${id}`].image", this[`pokemon-${id}`].image)
     this[`pokemon-${id}`].image.measure((x, y, width, height, pageX, pageY) => {
+      console.log("x, y, width, height, pageX, pageY", x, y, width, height, pageX, pageY)
       this.pokemonDetailRef.openPokemonDetail(
         true,
         { width, height, x: pageX, y: pageY },
