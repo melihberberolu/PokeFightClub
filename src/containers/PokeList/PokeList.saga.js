@@ -6,7 +6,6 @@ import {
   pokeListSuccess
 } from './PokeList.actions';
 import LoadingStatus from '../../constants/loadingStatus';
-import _ from 'lodash';
 
 export const getPokeListState = state => state.pokeList;
 
@@ -23,13 +22,14 @@ export function* pokeListFlow({ payload }) {
         offset: newOffset
       }
     });
+
     if (objects && objects.length > 0) {
       yield put(
         pokeListSuccess({
-          pokemons: _.chunk([
-            ..._.flatten(payload.limit === limit && pokemons || []),
+          pokemons: [
+            ...(payload.limit === limit ? pokemons : []),
             ...objects
-          ], 2),
+          ],
           loading: LoadingStatus.done,
           offset: newOffset,
           limit: payload.limit,

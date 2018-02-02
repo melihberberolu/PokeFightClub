@@ -13,7 +13,8 @@ const styles = StyleSheet.create({
   img: {
     width: 72,
     height: 72,
-    borderRadius: Platform.OS === 'ios' ? 0 : 72
+    borderRadius: Platform.OS === 'ios' ? 0 : 72,
+    resizeMode: 'contain'
   }
 });
 

@@ -1,4 +1,5 @@
 import { AsyncStorage } from 'react-native';
+console.disableYellowBox = true;
 
 const REDUX_PERSIST = {
   active: true,

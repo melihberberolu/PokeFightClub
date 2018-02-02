@@ -28,8 +28,6 @@ class PokemonDetail extends PureComponent {
 
   _handleLineLayout({ nativeEvent: { layout: { width } } }) {
     this.setState({ lineWidth: width });
-    this._lineWidth = width;
-    console.log('handle: ', this._lineWidth);
   }
 
   render() {

@@ -1,15 +1,15 @@
 import { StyleSheet } from 'react-native';
+import Helpers from '../../utils/helpers';
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
     backgroundColor: '#fff',
     borderWidth: 1,
     borderColor: '#e9e9e9',
     padding: 12,
     justifyContent: 'center',
     alignItems: 'center',
-    margin: 6
+    width: Helpers.screenWidth * 0.5
   },
 
   name: {

@@ -2,12 +2,12 @@ import React from 'react';
 import { Image, View } from 'react-native';
 import Shimmer from 'react-native-shimmer';
 import PropTypes from 'prop-types';
-import _ from 'lodash';
+import range from 'lodash/range';
 
 const ShimmerView = ({ total, contentSpace, duration, imgPath, imgStyle }) => {
   return (
     <View>
-      {_.map(_.range(total || 1), (v, i) => (
+      {range(total || 1).map((v, i) => (
         <View style={{ marginTop: contentSpace || 0 }} key={`shimmer${i}`}>
           <Shimmer
             direction="right"

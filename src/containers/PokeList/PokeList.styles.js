@@ -1,4 +1,5 @@
 import { StyleSheet } from 'react-native';
+import Helpers from '../../utils/helpers';
 
 const styles = StyleSheet.create({
   container: {
@@ -7,6 +8,11 @@ const styles = StyleSheet.create({
   row: {
     flexDirection: 'row',
     alignItems: 'center'
+  },
+  loadMoreBtnWrapper: {
+    width: Helpers.screenWidth,
+    alignItems: 'center',
+    justifyContent: 'center'
   },
   loadMoreBtn: {
     borderRadius: 70,

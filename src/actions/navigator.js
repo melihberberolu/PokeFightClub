@@ -1,4 +1,4 @@
-export const BACK = "NAV/NAVIGATION_BACK";
+export const BACK = 'NAV/NAVIGATION_BACK';
 export function createNavigationBack(payload) {
   return {
     type: BACK,
@@ -6,7 +6,7 @@ export function createNavigationBack(payload) {
   };
 }
 
-export const INIT = "NAV/NAVIGATION_INIT";
+export const INIT = 'NAV/NAVIGATION_INIT';
 export function createNavigationInit(payload) {
   return {
     type: INIT,
@@ -14,7 +14,7 @@ export function createNavigationInit(payload) {
   };
 }
 
-export const NAVIGATE = "NAV/NAVIGATION_NAVIGATE";
+export const NAVIGATE = 'NAV/NAVIGATION_NAVIGATE';
 export function createNavigationNavigate(payload) {
   return {
     type: NAVIGATE,
@@ -22,7 +22,7 @@ export function createNavigationNavigate(payload) {
   };
 }
 
-export const RESET = "NAV/NAVIGATION_RESET";
+export const RESET = 'NAV/NAVIGATION_RESET';
 export function createNavigationReset(payload) {
   return {
     type: RESET,
@@ -30,7 +30,7 @@ export function createNavigationReset(payload) {
   };
 }
 
-export const SET_PARAMS = "NAVIGATION_SET_PARAMS";
+export const SET_PARAMS = 'NAVIGATION_SET_PARAMS';
 export function createNavigationSetParams(payload) {
   return {
     type: SET_PARAMS,
@@ -38,7 +38,7 @@ export function createNavigationSetParams(payload) {
   };
 }
 
-export const URI = "NAV/NAVIGATION_URI";
+export const URI = 'NAV/NAVIGATION_URI';
 export function createNavigationUri(payload) {
   return {
     type: URI,
@@ -46,7 +46,7 @@ export function createNavigationUri(payload) {
   };
 }
 
-export const COND = "NAV/NAVIGATION_COND";
+export const COND = 'NAV/NAVIGATION_COND';
 export function createNavigationCond(payload) {
   return {
     type: COND,

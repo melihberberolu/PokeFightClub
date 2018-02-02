@@ -10,55 +10,41 @@ import Pokemon from '../../components/Pokemon/Pokemon';
 import PokemonDetailModal from './view/Pokemon.DetailModal.component';
 import Filter from './view/PokeList.Filter.component';
 import LoadingStatus from '../../constants/loadingStatus';
-import _ from 'lodash';
 import ShimmerView from '../../components/ShimmerView/ShimmerView';
 import Images from '../../constants/images';
 
 class PokeList extends React.PureComponent {
-  constructor(props) {
-    super(props);
-    _.bindAll(this, [
-      'renderPokeItem',
-      'showPokemonDetail',
-      'renderFilter',
-      'getPokeList',
-      'renderLoadMore'
-    ]);
-  }
-
   componentDidMount() {
     if (!this.props.pokemons.length) {
       this.getPokeList(null, LoadingStatus.loading);
     }
   }
 
-  keyExtractor = data => (data && data[0].pkdx_id) || 0;
+  keyExtractor = data => (data.pkdx_id) || 0;
 
-  getPokeList(queryLimit, loading = LoadingStatus.moreLoading) {
+  getPokeList = (queryLimit, loading = LoadingStatus.moreLoading) => {
     const { actions, limit } = this.props;
     actions.pokeListRequest({
       limit: queryLimit || limit,
       loading
     });
-  }
+  };
 
-  showPokemonDetail(pokemon, id) {
-    console.log("this[`pokemon-${id}`].image", this[`pokemon-${id}`].image)
+  showPokemonDetail = (pokemon, id) => {
     this[`pokemon-${id}`].image.measure((x, y, width, height, pageX, pageY) => {
-      console.log("x, y, width, height, pageX, pageY", x, y, width, height, pageX, pageY)
       this.pokemonDetailRef.openPokemonDetail(
         true,
         { width, height, x: pageX, y: pageY },
         pokemon
       );
     });
-  }
+  };
 
-  renderFilter() {
+  renderFilter = () => {
     return <Filter onFilterList={this.getPokeList} limit={this.props.limit} />;
-  }
+  };
 
-  renderLoadMore() {
+  renderLoadMore = () => {
     if (LoadingStatus.moreLoading === this.props.loading) {
       return (
         <ShimmerView
@@ -69,29 +55,27 @@ class PokeList extends React.PureComponent {
       );
     }
     return (
-      <Button
-        btnStyle={styles.loadMoreBtn}
-        txtStyle={styles.loadMoreTxt}
-        title={'Load More'}
-        onPress={this.getPokeList}
-      />
-    );
-  }
-
-  renderPokeItem({ item }) {
-    return (
-      <View style={styles.row}>
-        {_.map(item, pokemon => (
-          <Pokemon
-            key={pokemon.pkdx_id}
-            ref={ref => (this[`pokemon-${pokemon.pkdx_id}`] = ref)}
-            pokemon={pokemon}
-            showPokemonDetail={this.showPokemonDetail}
-          />
-        ))}
+      <View style={styles.loadMoreBtnWrapper}>
+        <Button
+          btnStyle={styles.loadMoreBtn}
+          txtStyle={styles.loadMoreTxt}
+          title={'Load More'}
+          onPress={this.getPokeList}
+        />
       </View>
     );
-  }
+  };
+
+  renderPokeItem = ({ item }) => {
+    return (
+      <Pokemon
+        key={item.pkdx_id}
+        ref={ref => (this[`pokemon-${item.pkdx_id}`] = ref)}
+        pokemon={item}
+        showPokemonDetail={this.showPokemonDetail}
+      />
+    );
+  };
 
   render() {
     const { pokemons, loading } = this.props;
@@ -108,6 +92,7 @@ class PokeList extends React.PureComponent {
         <PokemonDetailModal ref={ref => (this.pokemonDetailRef = ref)} />
         <FlatList
           data={pokemons}
+          numColumns={2}
           renderItem={this.renderPokeItem}
           extraData={loading}
           ListHeaderComponent={this.renderFilter}

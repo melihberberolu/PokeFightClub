@@ -32,7 +32,6 @@ class PokemonDetailModal extends PureComponent {
     initCardPosition = INIT_CARD_POSITION,
     pokemon = null
   ) => {
-    console.log("initCardPosition:", initCardPosition)
     this.setState(
       { isVisible: isShow, cardPosition: initCardPosition, pokemon },
       () => isShow && this.startAnimationChain(isShow)
@@ -85,8 +84,8 @@ class PokemonDetailModal extends PureComponent {
           style={{
             position: 'absolute',
             zIndex: 9,
-            height: cardPosition.height - 12, // -12 for margin size
-            width: cardPosition.width - 12, // -12 for margin size
+            height: cardPosition.height,
+            width: cardPosition.width,
             transform: [
               {
                 translateX: this._generateInterpolate(
