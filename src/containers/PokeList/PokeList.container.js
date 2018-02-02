@@ -4,7 +4,6 @@ import PropTypes from 'prop-types';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import styles from './PokeList.styles';
-import Button from '../../components/Button/Button';
 import { pokeListRequest } from './PokeList.actions';
 import Pokemon from '../../components/Pokemon/Pokemon';
 import PokemonDetailModal from './view/Pokemon.DetailModal.component';
