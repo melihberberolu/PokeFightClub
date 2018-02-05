@@ -4,7 +4,6 @@ import PropTypes from 'prop-types';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import styles from './PokeList.styles';
-import Button from '../../components/Button/Button';
 import { pokeListRequest } from './PokeList.actions';
 import Pokemon from '../../components/Pokemon/Pokemon';
 import PokemonDetailModal from './view/Pokemon.DetailModal.component';
@@ -44,8 +43,8 @@ class PokeList extends React.PureComponent {
     return <Filter onFilterList={this.getPokeList} limit={this.props.limit} />;
   };
 
-  renderLoadMore = () => {
-    if (LoadingStatus.moreLoading === this.props.loading) {
+  renderLoadingMore = () => {
+    if (LoadingStatus.moreLoading) {
       return (
         <ShimmerView
           imgStyle={styles.shimmerImg}
@@ -54,16 +53,7 @@ class PokeList extends React.PureComponent {
         />
       );
     }
-    return (
-      <View style={styles.loadMoreBtnWrapper}>
-        <Button
-          btnStyle={styles.loadMoreBtn}
-          txtStyle={styles.loadMoreTxt}
-          title={'Load More'}
-          onPress={this.getPokeList}
-        />
-      </View>
-    );
+    return null;
   };
 
   renderPokeItem = ({ item }) => {
@@ -96,8 +86,9 @@ class PokeList extends React.PureComponent {
           renderItem={this.renderPokeItem}
           extraData={loading}
           ListHeaderComponent={this.renderFilter}
-          ListFooterComponent={this.renderLoadMore}
+          ListFooterComponent={this.renderLoadingMore}
           keyExtractor={this.keyExtractor}
+          onEndReached={()=>this.getPokeList()}
         />
       </View>
     );
