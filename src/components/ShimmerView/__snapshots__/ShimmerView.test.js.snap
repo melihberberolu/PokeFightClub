@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Testing Shimmer View component renders as expected 1`] = `
+<View>
+  <View
+    key="shimmer0"
+    style={
+      Object {
+        "marginTop": 0,
+      }
+    }
+  >
+    <Shimmer
+      animating={true}
+      animationOpacity={1}
+      beginFadeDuration={0}
+      direction="right"
+      duration={750}
+      endFadeDuration={0}
+      opacity={0.5}
+      pauseDuration={400}
+      tilt={0}
+    >
+      <Image
+        source={1}
+      />
+    </Shimmer>
+  </View>
+</View>
+`;

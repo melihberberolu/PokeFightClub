@@ -1,0 +1,46 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Testing Pokemon component renders as expected 1`] = `
+<TouchableOpacity
+  activeOpacity={0.2}
+  onPress={[Function]}
+  style={
+    Array [
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "#fff",
+        "borderColor": "#e9e9e9",
+        "borderWidth": 1,
+        "flex": 1,
+        "justifyContent": "center",
+        "margin": 6,
+        "padding": 12,
+      },
+      undefined,
+    ]
+  }
+>
+  <View
+    collapsable={false}
+  >
+    <PokemonImage
+      pokemonId={12}
+    />
+  </View>
+  <Text
+    accessible={true}
+    allowFontScaling={true}
+    ellipsizeMode="tail"
+    style={
+      Object {
+        "color": "rgba(0, 0, 0, 0.8)",
+        "fontSize": 20,
+        "fontWeight": "500",
+        "marginTop": 12,
+      }
+    }
+  >
+    Pikachu
+  </Text>
+</TouchableOpacity>
+`;

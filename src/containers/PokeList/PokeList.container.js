@@ -88,7 +88,7 @@ class PokeList extends React.PureComponent {
           ListHeaderComponent={this.renderFilter}
           ListFooterComponent={this.renderLoadingMore}
           keyExtractor={this.keyExtractor}
-          onEndReached={()=>this.getPokeList()}
+          onEndReached={() => this.getPokeList()}
         />
       </View>
     );

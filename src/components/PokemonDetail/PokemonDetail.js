@@ -22,7 +22,8 @@ class PokemonDetail extends PureComponent {
     Animated.timing(this.lineAnimationValue, {
       toValue: 1,
       duration: 500,
-      delay: 700
+      delay: 700,
+      useNativeDriver: true
     }).start();
   }
 

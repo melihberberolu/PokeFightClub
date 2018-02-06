@@ -1,0 +1,117 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Testing Button component renders as expected 1`] = `
+<TouchableOpacity
+  activeOpacity={0.2}
+  onPress={[Function]}
+  style={
+    Array [
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "#4d9efd",
+        "flex": 1,
+        "flexDirection": "row",
+        "height": 60,
+        "justifyContent": "center",
+      },
+      undefined,
+    ]
+  }
+>
+  <Text
+    accessible={true}
+    allowFontScaling={true}
+    ellipsizeMode="tail"
+    style={
+      Array [
+        Object {
+          "color": "#fff",
+          "fontSize": 18,
+          "fontWeight": "500",
+          "textAlign": "center",
+        },
+        undefined,
+      ]
+    }
+  >
+    button
+  </Text>
+</TouchableOpacity>
+`;
+
+exports[`Testing Button component renders as expected 2`] = `
+<TouchableOpacity
+  activeOpacity={0.2}
+  onPress={[Function]}
+  style={
+    Array [
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "#4d9efd",
+        "flex": 1,
+        "flexDirection": "row",
+        "height": 60,
+        "justifyContent": "center",
+      },
+      undefined,
+    ]
+  }
+>
+  <Text
+    accessible={true}
+    allowFontScaling={true}
+    ellipsizeMode="tail"
+    style={
+      Array [
+        Object {
+          "color": "#fff",
+          "fontSize": 18,
+          "fontWeight": "500",
+          "textAlign": "center",
+        },
+        undefined,
+      ]
+    }
+  >
+    test button
+  </Text>
+</TouchableOpacity>
+`;
+
+exports[`Testing Button component renders disabled button as expected 1`] = `
+<TouchableOpacity
+  activeOpacity={0.2}
+  disabled={true}
+  onPress={[Function]}
+  style={
+    Array [
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "#4d9efd",
+        "flex": 1,
+        "flexDirection": "row",
+        "height": 60,
+        "justifyContent": "center",
+      },
+      undefined,
+    ]
+  }
+>
+  <Text
+    accessible={true}
+    allowFontScaling={true}
+    ellipsizeMode="tail"
+    style={
+      Array [
+        Object {
+          "color": "#fff",
+          "fontSize": 18,
+          "fontWeight": "500",
+          "textAlign": "center",
+        },
+        undefined,
+      ]
+    }
+  />
+</TouchableOpacity>
+`;

@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Testing Pokemon Image component renders as expected 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "#ccc",
+      "borderRadius": 72,
+      "height": 72,
+      "justifyContent": "center",
+      "overflow": "hidden",
+      "width": 72,
+    }
+  }
+>
+  <Image
+    source={
+      Object {
+        "uri": "https://pokeapi.co/media/img/11.png",
+      }
+    }
+    style={
+      Object {
+        "borderRadius": 0,
+        "height": 72,
+        "width": 72,
+      }
+    }
+  />
+</View>
+`;

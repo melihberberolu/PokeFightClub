@@ -1,0 +1,241 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Testing Pokemon Detail component renders as expected 1`] = `
+<View
+  style={
+    Object {
+      "padding": 6,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flexDirection": "row",
+        "marginBottom": 10,
+      }
+    }
+  >
+    <Icon
+      color="#dd611b"
+      name="uniF102"
+      style={
+        Object {
+          "fontSize": 24,
+        }
+      }
+    />
+    <View
+      onLayout={[Function]}
+      style={
+        Array [
+          Object {
+            "borderColor": "#ccc",
+            "borderRadius": 100,
+            "borderWidth": 2,
+            "flex": 1,
+            "height": 14,
+            "marginLeft": 10,
+            "overflow": "hidden",
+            "width": "100%",
+          },
+        ]
+      }
+    >
+      <AnimatedComponent
+        style={
+          Array [
+            Object {
+              "backgroundColor": "#dd611b",
+              "height": 30,
+              "position": "absolute",
+              "right": "100%",
+              "width": "100%",
+            },
+            Object {
+              "backgroundColor": "#dd611b",
+            },
+            Object {
+              "transform": Array [
+                Object {
+                  "translateX": 0,
+                },
+              ],
+            },
+          ]
+        }
+      />
+    </View>
+  </View>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flexDirection": "row",
+        "marginBottom": 10,
+      }
+    }
+  >
+    <Icon
+      color="#55addd"
+      name="uniF101"
+      style={
+        Object {
+          "fontSize": 24,
+        }
+      }
+    />
+    <View
+      style={
+        Array [
+          Object {
+            "borderColor": "#ccc",
+            "borderRadius": 100,
+            "borderWidth": 2,
+            "flex": 1,
+            "height": 14,
+            "marginLeft": 10,
+            "overflow": "hidden",
+            "width": "100%",
+          },
+        ]
+      }
+    >
+      <AnimatedComponent
+        style={
+          Array [
+            Object {
+              "backgroundColor": "#dd611b",
+              "height": 30,
+              "position": "absolute",
+              "right": "100%",
+              "width": "100%",
+            },
+            Object {
+              "backgroundColor": "#55addd",
+            },
+            Object {
+              "transform": Array [
+                Object {
+                  "translateX": 0,
+                },
+              ],
+            },
+          ]
+        }
+      />
+    </View>
+  </View>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flexDirection": "row",
+        "marginBottom": 10,
+      }
+    }
+  >
+    <Icon
+      color="#951200"
+      name="uniF100"
+      style={
+        Object {
+          "fontSize": 24,
+        }
+      }
+    />
+    <View
+      style={
+        Array [
+          Object {
+            "borderColor": "#ccc",
+            "borderRadius": 100,
+            "borderWidth": 2,
+            "flex": 1,
+            "height": 14,
+            "marginLeft": 10,
+            "overflow": "hidden",
+            "width": "100%",
+          },
+        ]
+      }
+    >
+      <AnimatedComponent
+        style={
+          Array [
+            Object {
+              "backgroundColor": "#dd611b",
+              "height": 30,
+              "position": "absolute",
+              "right": "100%",
+              "width": "100%",
+            },
+            Object {
+              "backgroundColor": "#951200",
+            },
+            Object {
+              "transform": Array [
+                Object {
+                  "translateX": 0,
+                },
+              ],
+            },
+          ]
+        }
+      />
+    </View>
+  </View>
+  <View
+    style={
+      Object {
+        "borderBottomWidth": 1,
+        "borderColor": "#959595",
+        "marginBottom": 4,
+        "paddingBottom": 2,
+        "width": "25%",
+      }
+    }
+  >
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Object {
+          "color": "rgba(0, 0, 0, 0.8)",
+          "fontSize": 16,
+          "fontWeight": "500",
+        }
+      }
+    >
+      Abilities
+    </Text>
+  </View>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flexDirection": "row",
+      }
+    }
+  >
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      key="posion"
+      style={
+        Object {
+          "color": "rgba(0, 0, 0, 0.80)",
+          "fontSize": 13,
+          "marginRight": 6,
+          "textAlign": "center",
+        }
+      }
+    >
+      posion
+    </Text>
+  </View>
+</View>
+`;

@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Testing Icon component renders as expected 1`] = `
+<Icon
+  allowFontScaling={false}
+  name="uniF101"
+  size={12}
+/>
+`;

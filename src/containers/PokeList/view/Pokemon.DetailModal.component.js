@@ -52,14 +52,16 @@ class PokemonDetailModal extends PureComponent {
   startCardAnimation(isShow) {
     return Animated.timing(this.cardAnimationValue, {
       toValue: isShow ? 1 : 0,
-      duration: 300
+      duration: 300,
+      useNativeDriver: true
     });
   }
 
   startImageAnimation(isShow) {
     return Animated.timing(this.imageAnimationValue, {
       toValue: isShow ? 1 : 0,
-      duration: 300
+      duration: 300,
+      useNativeDriver: true
     });
   }
 

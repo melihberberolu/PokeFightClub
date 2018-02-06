@@ -4,7 +4,8 @@ import { Alert } from 'react-native';
 import { apiEndpoint } from '../configs/environments';
 
 function errorHandler(msg = '') {
-  return Alert.alert('ERROR', msg);
+  return null;
+  // return Alert.alert('ERROR', msg);
 }
 
 const requestHandler = options =>

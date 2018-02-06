@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Testing PokeList container should render the container component 1`] = `<Connect(PokeList) />`;
