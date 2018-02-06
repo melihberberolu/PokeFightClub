@@ -19,7 +19,7 @@ class PokeList extends React.PureComponent {
     }
   }
 
-  keyExtractor = data => (data.pkdx_id) || 0;
+  keyExtractor = data => data.pkdx_id;
 
   getPokeList = (queryLimit, loading = LoadingStatus.moreLoading) => {
     const { actions, limit } = this.props;
